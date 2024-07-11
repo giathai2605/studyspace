@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --color-primary: #6C9BCF;
+    --color-danger: #FF0060;
+    --color-success: #1B9C85;
+    --color-warning: #F7D060;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-dark-variant: #677483;
+    --color-background: #f6f6f9;
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 1.2rem;
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+.dark-mode-variables {
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+a {
+    color: var(--color-dark);
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 0.87rem;
+}
+
+small {
+    font-size: 0.76rem;
+}
+
+aside .toggle {
+    display: flex;
+    align-items: center;
+    /*justify-content: space-between;*/
+    margin: 38px 0;
+    justify-content: center;
+}
+
+aside .toggle .logo h2 {
+    display: flex;
+    gap: 0.5rem;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--color-danger);
+}
+
+aside .toggle .logo span {
+    display: flex;
+    gap: 0.5rem;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--color-dark);
+}
+
+aside .toggle .logo .img {
+    width: 2rem;
+    height: 2rem;
+}
+
+aside .toggle .close {
+    padding-right: 1rem;
+    display: none;
+}
+
+aside .sidebar {
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    background-color: var(--color-white);
+    box-shadow: var(--box-shadow);
+    border-radius: 15px;
+    position: relative;
+    top: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+aside .sidebar:hover {
+    box-shadow: none;
+}
+
+aside .sidebar a {
+    display: flex;
+    align-items: center;
+    color: var(--color-info-dark);
+    height: 3.5rem;
+    gap: 1rem;
+    position: relative;
+    margin-left: 2rem;
+    transition: all 0.3s ease;
+}
+
+aside .sidebar a span {
+    font-size: 1.6rem;
+    transition: all 0.3s ease;
+}
+
+
+/* aside .sidebar a:last-child {
+    bottom: 2rem;
+    width: 100%;
+    position: absolute;
+} */
+
+aside .sidebar a:active {
+    width: 100%;
+    color: var(--color-danger);
+    background-color: var(--color-light);
+    margin-left: 0;
+    transition: all 0.5s ease;
+}
+
+aside .sidebar a:active::before {
+    content: '';
+    width: 6px;
+    height: 18px;
+    background-color: var(--color-danger);
+    align-items: center;
+}
+
+aside .sidebar a:active span {
+    background-color: var(--color-light);
+    margin-left: calc(1rem - 3px);
+}
+
+aside .sidebar a:hover {
+    color: rgb(225, 66, 66);
+}
+
+aside .sidebar a:hover span {
+    margin-left: 0.6rem;
+}
+
+aside .sidebar .message-count {
+    background-color: var(--color-danger);
+    padding: 2px 6px;
+    font-size: 10px;
+    color: #FFF;
+    border-radius: var(--border-radius-1);
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
+}
+
+.dropdrown {
+    position: relative;
+    z-index: 1;
+}
+
+.dropdown_list {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease;
+    margin-left: 2rem;
+}
+
+.dropdrown.active .dropdown_list {
+    max-height: 200px;
+}
+.dropdown_select .bx-chevron-right.active{
+    transform: rotate(90deg);
+    transition: 0.4s ease;
+}
